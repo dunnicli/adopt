@@ -1,0 +1,13 @@
+//import Navbar from "../components/Navbar";
+//import "../styles/globals.css";
+//import "../components/Navbar.css";
+
+
+function HomePage() {
+  return <div>
+    
+  <h1 className="text-4xl font-bold">Welcome to BShelter.js!</h1>
+  </div>
+}
+
+export default HomePage
