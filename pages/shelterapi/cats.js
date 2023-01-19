@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Head from "next/head";
+import Image from 'next/image'
 //import prisma from "../../lib/prisma.ts";
 
 
@@ -38,6 +39,18 @@ export default function ShelterApi({ data }) {
               <p>Breed: {item.breed}</p>
               <p>Weight: {item.weight}</p>
               <p>Age: {item.myage}</p>
+              <p>
+              {item.photoPublic && (
+            <Image
+              src={item.photoThumbnail}
+              alt="A picture"
+              width={100}
+              height={100}
+            />
+          )}
+              
+              </p>
+
 
               <div className="page-nav">
                 <Link href="">
@@ -48,6 +61,44 @@ export default function ShelterApi({ data }) {
             </li>
           ))}
         </ul>
+
+        <p>&nbsp;</p>
+        <ul>
+          {data.map((item) => (
+            <li key={item.id}>
+         <div className="p-5">   
+        <div className="card w-96 bg-base-100 shadow-xl">
+  <figure><img src={item.photoLarge} alt="Shoes" /></figure>
+  <div className="card-body">
+    <h2 className="card-title">
+    {item.name}
+      <div className="badge badge-secondary">Available!</div>
+    </h2>
+    <p>If a dog chews shoes whose shoes does he choose?</p>
+    <div className="card-actions justify-end">
+      <div className="badge badge-outline">Adoption</div>
+    </div>
+  </div>
+</div>        
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+</li>
+
+          ))}
+        </ul>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<div>
+</div>        
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
       </main>
 
       <footer className="text-center font-bold text-xl">

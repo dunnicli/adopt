@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Head from "next/head";
+import Image from 'next/image'
 //import prisma from "../../lib/prisma.ts";
 
 
@@ -38,6 +39,17 @@ export default function ShelterApi({ data }) {
               <p>Breed: {item.breed}</p>
               <p>Weight: {item.weight}</p>
               <p>Age: {item.myage}</p>
+              <p>
+              {item.photoPublic && (
+            <Image
+              src={item.photoThumbnail}
+              alt="A picture"
+              width={100}
+              height={100}
+            />
+          )}
+              
+              </p>
 
               <div className="page-nav">
                 <Link href="">
@@ -61,6 +73,7 @@ export async function getServerSideProps() {
   //const notes = await prisma.note.findMany();
   //const res = await fetch(`https://shelter.spcapv.net/adopt/animals`)
   const res = await fetch(`https://shelter.spcapv.net/adopt/dogs`)
+  //const res = await fetch(`http://127.0.0.1:8000/adopt/dogs`)
   //const res = await fetch(`http://127.0.0.1:8000/adopt/cats`)
   const data = await res.json()
     

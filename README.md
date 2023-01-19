@@ -6,7 +6,8 @@ JD  Jan 7, 2023
 
 I'm using yarn to add packages.
 
-
+## To run the app on your local machine
+yarn dev -H 192.168.0.7
 
 ## Getting Started
 

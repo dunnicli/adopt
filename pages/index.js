@@ -33,6 +33,12 @@ function HomePage() {
             Sign in
           </button>
         )}
+  
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <div className="page-nav">
+    <Link href="/shelterapi/adoptAppCreate">New Adoption Application</Link>
+  </div>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
         <div className="page-nav">
@@ -47,6 +53,11 @@ function HomePage() {
   <p>&nbsp;</p>
         <div className="page-nav">
           <Link href="/shelterapi/cats">Cats</Link>
+        </div>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+        <div className="page-nav">
+          <Link href="/shelterapi/thecats">The Cats</Link>
         </div>
   <p>&nbsp;</p>
   </div>

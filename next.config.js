@@ -9,6 +9,21 @@ const nextConfig = {
         port: '',
         pathname: '/shelter/*',
       },
+
+      {
+        protocol: 'https',
+        hostname: 'spcapvnet-wsp.s3.amazonaws.com',
+        port: '',
+        pathname: '/media/photos/*',
+      },
+
+      {
+        protocol: 'https',
+        hostname: 'spcapv-pa.s3.amazonaws.com',
+        port: '',
+        pathname: '/media/photos/*',
+      },
+
     ],
   },
 
@@ -16,3 +31,4 @@ const nextConfig = {
 }
 
 module.exports = nextConfig
+
