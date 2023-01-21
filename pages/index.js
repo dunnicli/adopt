@@ -34,6 +34,12 @@ function HomePage() {
           </button>
         )}
   
+
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <div className="page-nav">
+    <Link href="/shelterapi/appList">My Applications</Link>
+  </div>
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <div className="page-nav">

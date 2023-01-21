@@ -42,7 +42,9 @@ export default function AdoptAppCreate() {
           <h3 className="text-4xl font-bold">New Adoption Application</h3>
         </div>
 
-        <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <form 
+        onSubmit={saveApp}
+        className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
           <p>
             <b>Your First and Last Name</b>
             <br />
@@ -200,19 +202,27 @@ export default function AdoptAppCreate() {
             />
           </p>
           <p>&nbsp;</p>
-          <p>
-            <b>Can we contact you at work?</b>
-            <br />
-            <input
-              className="form-checkbox"
-              type="checkbox"
-              defaultChecked={false}
-              name="cancontact"
-              onChange={(e) =>
+          <div className="label">
+              <label>Can we contact you at work?</label>
+              <br />
+            </div>
+            <div>
+            <select id="cancontact" 
+            name="editAppCancontact"
+            onChange={(e) =>
                 setFormData({ ...formData, cancontact: e.target.value })
               }
-            /> &nbsp; Yes
-          </p>
+            >
+            <option value="">Select Yes or No</option>
+            <option value="YES">Yes</option>
+            <option value="NO">No</option>
+            </select>
+            </div>
+           
+
+
+
+
           <p>&nbsp;</p>
           <p>
             <b>What kind of animal are you looking for?</b>
@@ -250,7 +260,7 @@ export default function AdoptAppCreate() {
           <ToastContainer />
           <p>
             <button
-              onClick={saveApp}
+              type="submit"
               className="font-bold mt-4 bg-pink-500 text-white rounded p-4 shadow-lg"
             >
               Save Application
