@@ -1,21 +1,63 @@
 import Head from "next/head";
 import { useState } from "react";
 import Router from "next/router";
+import { signOut, useSession } from "next-auth/react";
 import { toast, ToastContainer } from "react-nextjs-toast";
 //import axios from "axios";
 
 
 export default function AdoptAppCreate() {
+  const { data: session } = useSession();
+  //const { session } = useSession();
   const [formData, setFormData] = useState({});
+
+    const name = formData.name;
+    const adopter_id = session.id; 
+    const street = formData.street;
+    const city = formData.city;
+    const province = formData.province;
+    const postal = formData.postal;
+    const homephone = formData.homephone;
+    const cellphone = formData.cellphone;
+    const employer = formData.employer;
+    const workphone = formData.workphone;
+    const cancontact = formData.cancontact;
+    const email = formData.email;
+    const nameAnimal = formData.nameAnimal;
+    const whatKindAnimal = formData.whatKindAnimal;
+    const notes = formData.notes;
+
+    
+    //
+    let formstuff = {
+      
+            name,
+            street,
+            city,
+            province,
+            postal,
+            homephone,
+            cellphone,
+            employer,
+            workphone,
+            cancontact,
+            email,
+            nameAnimal,
+            whatKindAnimal,
+            notes,
+            adopter_id,
+    };
+  
+  
 
   async function saveApp(e) {
     toast.notify(`Application is saving!`);
     e.preventDefault();
     //const response = await fetch(`https://shelter.spcapv.net/adopt/adoptAppCreate`, {
-    console.log(JSON.stringify(formData));
+    console.log(JSON.stringify(formstuff));
     const response = await fetch(`http://127.0.0.1:8000/adopt/adoptAppCreate/`, {
         method: "POST",
-        body: JSON.stringify(formData),
+        body: JSON.stringify(formstuff),
         //mode: 'no-cors',
         headers: {
             'Accept': 'application/json',
@@ -26,7 +68,7 @@ export default function AdoptAppCreate() {
     
     
     toast.remove();
-    return await response.json(), await Router.push("/shelterapi/cats");
+    return await response.json(), await Router.push(`/shelterapi/myapps/?key=${session.id}`);
   }
 
   return (
@@ -37,7 +79,7 @@ export default function AdoptAppCreate() {
       </Head>
 
       <main className="main">
-        <p>&nbsp;</p>
+        <p>{session.id}</p>
         <div className="page-nav">
           <h3 className="text-4xl font-bold">New Adoption Application</h3>
         </div>
@@ -45,6 +87,7 @@ export default function AdoptAppCreate() {
         <form 
         onSubmit={saveApp}
         className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+
           <p>
             <b>Your First and Last Name</b>
             <br />

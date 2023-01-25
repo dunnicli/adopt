@@ -10,10 +10,10 @@ export default NextAuth({
     CredentialProvider({
       name: "credentials",
       credentials: {
-        username: {
-          label: "Username",
+        email: {
+          label: "email",
           type: "text",
-          placeholder: "your_username",
+          placeholder: "your_email",
         },
         password: { label: "Password", type: "password" },
       },
@@ -24,7 +24,7 @@ export default NextAuth({
         ///***
         const user = await prisma.user.findFirst({
           where: {
-            username: credentials.username,
+            email: credentials.email,
             //password: credentials.password,
           },
         });
@@ -71,7 +71,7 @@ export default NextAuth({
       // first time jwt callback is run, user object is available
       if (user) {
         token.id = user.id;
-        token.username = user.username;
+        //token.username = user.username;
         token.email = user.email;
         token.isAdmin = user.isAdmin;
         token.active = user.active;
@@ -82,7 +82,7 @@ export default NextAuth({
     session: ({ session, token }) => {
       if (token) {
         session.id = token.id;
-        session.username = token.username;
+        //session.username = token.username;
         session.email = token.email;
         session.isAdmin = token.isAdmin;
         session.active = token.active;

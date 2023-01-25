@@ -113,10 +113,10 @@ export async function getServerSideProps() {
   //const res = await fetch(`https://shelter.spcapv.net/adopt/animals`)
   //const res = await fetch(`http://127.0.0.1:8000/adopt/dogs`)
   const res = await fetch(`https://shelter.spcapv.net/adopt/cats`)
-  const data = await res.json()
+  //const data = await res.json()
     
   return {
-    //props: { data: JSON.parse(JSON.stringify(res)) },
-    props: { data },
+    props: { data: JSON.parse(JSON.stringify(res)) },
+    //props: { data },
   };
 }

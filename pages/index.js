@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Head from "next/head";
-import { signOut, useSession } from "next-auth/react";
+import { signOut, useSession, signIn } from "next-auth/react";
 import { useRouter } from "next/dist/client/router";
 
 
@@ -23,48 +23,38 @@ function HomePage() {
   <h1 className="text-4xl font-bold">Adoption Center - SPCA de PV</h1>
   <p>&nbsp;</p>
   {session ? (
-          <button onClick={() => signOut()}>Log out</button>
+          <button onClick={() => signOut({ callbackUrl: '/' })}>Log out</button>
         ) : (
-          <button
-            onClick={() => {
-              router.push("/api/auth/signin");
-            }}
-          >
-            Sign in
-          </button>
+          <button onClick={() => signIn(undefined, { callbackUrl: '/' })}>Log In</button>  
         )}
   
 
   <p>&nbsp;</p>
   <p>&nbsp;</p>
+  {session && (
   <div className="page-nav">
-    <Link href="/shelterapi/appList">My Applications</Link>
+  <Link href={`/shelterapi/myapps/?key=${session.id}`}>My Applications</Link>
+  
   </div>
+  )}
   <p>&nbsp;</p>
+  
+  
   <p>&nbsp;</p>
+  {session && session.isAdmin && (
   <div className="page-nav">
+  <Link href={`/shelterapi/appList`}>All Applications</Link>
+  
+  </div>
+  )}
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  {session && (
+    <div className="page-nav">
     <Link href="/shelterapi/adoptAppCreate">New Adoption Application</Link>
   </div>
+  )}
   <p>&nbsp;</p>
-  <p>&nbsp;</p>
-        <div className="page-nav">
-          <Link href="/shelterapi">All Shelter Animals</Link>
-        </div>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-        <div className="page-nav">
-          <Link href="/shelterapi/dogs">Dogs</Link>
-        </div>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-        <div className="page-nav">
-          <Link href="/shelterapi/cats">Cats</Link>
-        </div>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-        <div className="page-nav">
-          <Link href="/shelterapi/thecats">The Cats</Link>
-        </div>
   <p>&nbsp;</p>
   </div>
 }
