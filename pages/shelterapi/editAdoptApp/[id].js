@@ -59,7 +59,7 @@ export default function EditApp({ data }) {
       
     };
 
-    const response = await fetch(`http://127.0.0.1:8000/adopt/update_adopt_app/${id}/`, {
+    const response = await fetch(`https://shelter.spcapv.net/adopt/update_adopt_app/${id}/`, {
       method: "PUT",
       body: JSON.stringify(formData),
       headers: {
@@ -296,7 +296,7 @@ export default function EditApp({ data }) {
 
 export async function getServerSideProps(context) {
     const id = context.params.id;
-    const res = await fetch(`http://127.0.0.1:8000/adopt/detail_adopt_app/${id}`)
+    const res = await fetch(`https://shelter.spcapv.net/adopt/detail_adopt_app/${id}`)
     //const res = await fetch(`https://shelter.spcapv.net/adopt/dog_detail/${id}`)
     const data = await res.json()
       

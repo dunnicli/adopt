@@ -8,11 +8,17 @@ import { toast, ToastContainer } from "react-nextjs-toast";
 
 export default function AdoptAppCreate() {
   const { data: session } = useSession();
-  //const { session } = useSession();
+  let myid;
+  
+  if (session) 
+    myid = session.id; 
+  else
+    myid = 0;
+
   const [formData, setFormData] = useState({});
 
     const name = formData.name;
-    const adopter_id = session.id; 
+    const adopter_id = myid; 
     const street = formData.street;
     const city = formData.city;
     const province = formData.province;
@@ -53,9 +59,9 @@ export default function AdoptAppCreate() {
   async function saveApp(e) {
     toast.notify(`Application is saving!`);
     e.preventDefault();
-    //const response = await fetch(`https://shelter.spcapv.net/adopt/adoptAppCreate`, {
-    console.log(JSON.stringify(formstuff));
-    const response = await fetch(`http://127.0.0.1:8000/adopt/adoptAppCreate/`, {
+    const response = await fetch(`https://shelter.spcapv.net/adopt/adoptAppCreate/`, {
+    //console.log(JSON.stringify(formstuff));
+    //const response = await fetch(`http://127.0.0.1:8000/adopt/adoptAppCreate/`, {
         method: "POST",
         body: JSON.stringify(formstuff),
         //mode: 'no-cors',
@@ -68,7 +74,7 @@ export default function AdoptAppCreate() {
     
     
     toast.remove();
-    return await response.json(), await Router.push(`/shelterapi/myapps/?key=${session.id}`);
+    return await response.json(), await Router.push(`/shelterapi/myapps/?key=${myid}`);
   }
 
   return (
@@ -79,7 +85,7 @@ export default function AdoptAppCreate() {
       </Head>
 
       <main className="main">
-        <p>{session.id}</p>
+        <p>{myid}</p>
         <div className="page-nav">
           <h3 className="text-4xl font-bold">New Adoption Application</h3>
         </div>

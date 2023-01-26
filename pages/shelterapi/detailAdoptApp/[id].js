@@ -71,8 +71,8 @@ export default function AdoptAppDetail({ data }) {
 
 export async function getServerSideProps(context) {
   const id = context.params.id;
-  const res = await fetch(`http://127.0.0.1:8000/adopt/detail_adopt_app/${id}`)
-  //const res = await fetch(`https://shelter.spcapv.net/adopt/dog_detail/${id}`)
+  //const res = await fetch(`http://127.0.0.1:8000/adopt/detail_adopt_app/${id}`)
+  const res = await fetch(`https://shelter.spcapv.net/adopt/detail_adopt_app/${id}`)
   const data = await res.json()
     
   return {

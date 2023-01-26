@@ -71,7 +71,7 @@ export default function ShelterApi({data, thekey}) {
 
 export async function getServerSideProps(context) {
   const key = context.query.key
-  const res = await fetch(`http://127.0.0.1:8000/adopt/my_apps/?key=${key}`)
+  const res = await fetch(`https://shelter.spcapv.net/adopt/my_apps/?key=${key}`)
   //const res = await fetch(`https://shelter.spcapv.net/adopt/dog_detail/${id}`)
   //const res = await fetch(`http://127.0.0.1:8000/adopt/dogs`)
   //const res = await fetch(`http://127.0.0.1:8000/adopt/cats`)

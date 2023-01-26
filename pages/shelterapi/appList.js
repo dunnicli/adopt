@@ -69,7 +69,7 @@ export default function ShelterApi({ data }) {
 export async function getServerSideProps() {
   //const notes = await prisma.note.findMany();
   //const res = await fetch(`https://shelter.spcapv.net/adopt/adopt_app_list`)
-  const res = await fetch(`http://127.0.0.1:8000/adopt/adopt_app_list`)
+  const res = await fetch(`https://shelter.spcapv.net/adopt/adopt_app_list`)
   //const res = await fetch(`http://127.0.0.1:8000/adopt/dogs`)
   //const res = await fetch(`http://127.0.0.1:8000/adopt/cats`)
   const data = await res.json()
