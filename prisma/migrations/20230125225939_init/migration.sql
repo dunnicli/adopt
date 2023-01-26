@@ -1,14 +1,16 @@
 -- CreateTable
 CREATE TABLE "Note" (
-    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "id" SERIAL NOT NULL,
     "title" TEXT NOT NULL,
     "message" TEXT NOT NULL,
-    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+
+    CONSTRAINT "Note_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateTable
 CREATE TABLE "Photo" (
-    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "id" SERIAL NOT NULL,
     "fileName" TEXT NOT NULL,
     "fileType" TEXT,
     "caption" TEXT,
@@ -18,22 +20,26 @@ CREATE TABLE "Photo" (
     "isGeneral" BOOLEAN DEFAULT false,
     "isAnimal" BOOLEAN DEFAULT false,
     "isS3" BOOLEAN DEFAULT false,
-    "isHost" BOOLEAN DEFAULT false
+    "isHost" BOOLEAN DEFAULT false,
+
+    CONSTRAINT "Photo_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateTable
 CREATE TABLE "users" (
-    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "id" SERIAL NOT NULL,
     "firstName" TEXT NOT NULL,
     "lastName" TEXT,
     "email" TEXT NOT NULL,
     "passwordHash" TEXT,
     "isAdmin" BOOLEAN DEFAULT false,
     "isAdopter" BOOLEAN DEFAULT false,
-    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "updatedAt" DATETIME,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3),
     "notes" TEXT,
-    "active" BOOLEAN DEFAULT true
+    "active" BOOLEAN DEFAULT true,
+
+    CONSTRAINT "users_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateIndex
