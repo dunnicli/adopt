@@ -21,7 +21,7 @@ export default function EditApp({ data }) {
     const { editAppName, editAppEmail, editAppStreet, editAppProvince,  
         editAppNameAnimal, editAppCity, editAppPostal, editAppHomephone, 
       editAppCellphone, editAppEmployer, editAppWorkphone, editAppCancontact, 
-      editAppwhatKindAnimal } =
+      editAppwhatKindAnimal, editAppNotes } =
       formRef.current;
     
     const id = parseInt(data.id);
@@ -37,7 +37,8 @@ export default function EditApp({ data }) {
     const employer = editAppEmployer.value;
     const workphone = editAppWorkphone.value;
     const cancontact = editAppCancontact.value;
-    const whatKindAnimal = editAppwhatKindAnimal.value;   
+    const whatKindAnimal = editAppwhatKindAnimal.value;
+    const notes = editAppNotes.value;   
     
     console.log("cancontact:", cancontact);  
 
@@ -56,6 +57,7 @@ export default function EditApp({ data }) {
       workphone,
       cancontact,
       whatKindAnimal,
+      notes,
       
     };
 
@@ -271,6 +273,20 @@ export default function EditApp({ data }) {
               cols="40"
               rows="5"
               defaultValue={data?.whatKindAnimal}
+              />
+          </div>
+
+          <div className="label">
+              <label>Notes</label>
+              <br />
+            </div>
+            <div>
+            <textarea
+              className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
+              name="editAppNotes"
+              cols="40"
+              rows="5"
+              defaultValue={data?.notes}
               />
           </div>
             

@@ -51,9 +51,55 @@ export default function AdoptAppDetail({ data }) {
           <li>Email: {data.email}<br />
           &nbsp;
           </li>
+          <li>Street Address: {data.street}<br />
+          &nbsp;
+          </li>
           <li>City: {data.city}<br />
           &nbsp;
           </li>
+          <li>State / Province: {data.province}<br />
+          &nbsp;
+          </li>
+          <li>Postal Code: {data.postal}<br />
+          &nbsp;
+          </li>
+          <li>Home Phone: {data.homephone}<br />
+          &nbsp;
+          </li>
+          <li>Cell Phone: {data.cellphone}<br />
+          &nbsp;
+          </li>
+          <li>Employer: {data.employer}<br />
+          &nbsp;
+          </li>
+          <li>Work Phone: {data.workphone}<br />
+          &nbsp;
+          </li>
+          <li>Can we contact you at work?: {data.cancontact}<br />
+          &nbsp;
+          </li>
+          <li>What kind of animal are you looking for?:<br />
+           {data.whatKindAnimal}<br />
+          &nbsp;
+          </li>
+          <li>Notes:<br />
+          {data.notes}<br />
+          &nbsp;
+          </li>
+          <li>Adopter ID: {data.adopter_id}<br />
+          &nbsp;
+          </li>
+          
+          
+          
+          
+
+          
+          
+          
+          
+          
+          
           <li>
           <Link className="badge badge-outline" 
           href={`/shelterapi/editAdoptApp/${data.id}`}>Edit</Link>  
