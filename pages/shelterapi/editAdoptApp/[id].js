@@ -82,7 +82,7 @@ export default function EditApp({ data }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {data.adopter_id == myid && (
-      <main className="main">
+      <main className="container">
         <div>
           <div>
             <p>&nbsp;</p>

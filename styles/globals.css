@@ -2,10 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-.main {
-    max-width: 960px;
-    min-width: 80%;
-    padding: 50px;
-    border: 1px solid deepskyblue;
-    margin: 20px auto;
+.jdimage {
+    display: block;
+    position: absolute;
+    object-fit: none;
+    
 }
