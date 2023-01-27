@@ -77,40 +77,86 @@ export default function DogsApi({ data }) {
           <h1 className="text-2xl font-black">HOW THIS WORKS:</h1>
             <p>
             Once you have determined the specific animal you wish 
-            to adopt, you need to contact us to begin the 
-            adoption process.
+            to adopt, you are ready to start on your Adoption Application.
             </p>
             <p>&nbsp;</p>
-            
-            <p>The process requires you to complete a thorough 
-            application here on this website and submit it for
-            review
-            </p>
 
+            
+            <h1 className="text-1xl font-black">Mexico and USA Residents:</h1>
             <p>&nbsp;</p>
-            <ul>
-            <li>1. Once your application has been reviewed, we will 
+            <ul className="list-disc">
+            <li>
+            If you want to adopt one of our dogs or cats, and you 
+            are a resident of Mexico or the United States, use the 
+            Adoption Application on this website.
+            </li>
+            </ul>
+            
+            <p>&nbsp;</p>
+            <h1 className="text-1xl font-black">Canada Residents:</h1>
+            <p>&nbsp;</p>
+            <ul className="list-disc">
+            <li>
+            If you are a resident of Canada and you want to adopt 
+            one of our dogs, please use the PVCA Adoption 
+            Application here.  You can download the form, 
+            fill it out and email it to us at spcapv@gmail.com.
+            <br />&nbsp;
+            </li>
+            <li>
+            <Link href="https://spcapvr.com/wp-content/uploads/2022/08/ADOPTION-APPLICATION.pdf">
+            <u><b>Canada PVCA Addoption Application - Dogs - Download</b></u>
+            </Link>
+            <br />&nbsp;
+            </li>
+              <li>        
+            If you are in Canada and want to adopt one of 
+            our cats, use this website and the online Adoption 
+            Application.  
+            </li>
+            </ul>
+            <p>&nbsp;</p>
+
+            <h1 className="text-1xl font-black">Adoption Fees</h1>
+            <p>&nbsp;</p>
+            <ul className="list-disc">
+            <li>Adoption Fees for Dogs:<br />
+            Mexico: $3,000 pesos<br />
+            US and Canada: $550 USD<br />&nbsp;</li>
+            
+            <li>Adoption fee for Cats:<br />
+            US and Canada: $150 USD<br />&nbsp;</li>
+            <li>Note* Adoption fees may change without prior notice.</li>
+            </ul>
+            <p>&nbsp;</p>
+
+            <p>Please be thorough on your application and submit it for
+            review.
+            </p>
+            <p>&nbsp;</p>
+            <ul className="list-disc">
+            <li>Once your application has been reviewed, we will 
             be in contact. Please allow us a few days of review 
             before expecting to hear from us. Be aware that 
             there may be additional contact required, such as a 
             home visit before the adoption is approved. 
             Please understand that we want to make sure this is 
             a perfect fit for you as well as our rescue.
-            </li>
+            <br />&nbsp;</li>
 
-            <li>2. We will guide you through the transport process if 
+            <li>We will guide you through the transport process if 
             necessary and provide you with all the necessary 
             veterinary records regarding vaccinations, etc.
-            </li>
+            <br />&nbsp;</li>
 
             <li>
-            3. You will also need to agree to the terms of our 
+            You will also need to agree to the terms of our 
             ADOPTION CONTRACT. Important to note that if any of 
             the terms of the contract are not honored it will 
             be considered a breach of contract, invalidating it 
             and allowing for retrieval of the animal back to the 
             SPCA PV.
-            </li>
+            <br />&nbsp;</li>
             </ul>
         </div>
         </div>

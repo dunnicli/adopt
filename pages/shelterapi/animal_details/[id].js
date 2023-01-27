@@ -1,12 +1,22 @@
 import Link from "next/link";
 import Head from "next/head";
 import Image from 'next/image'
+import { signOut, useSession } from "next-auth/react";
+
 //import prisma from "../../lib/prisma.ts";
 
 
 
 
 export default function AnimalDetail({ data }) {
+  const { data: session } = useSession();
+  let myid;
+  
+  if (session) 
+    myid = session.id; 
+  else
+    myid = 0;
+
   return (
 
     <div>
@@ -27,9 +37,20 @@ export default function AnimalDetail({ data }) {
       <div className="p-2 rounded-md">
           <p>&nbsp;</p>
           <h1 className="text-1xl font-black">Adopt {data.name}</h1>
-          <Link href="/shelterapi/adoptAppCreate">
+          
+          {session ? (
+            <Link href="/shelterapi/adoptAppCreate">
           <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg btn-primary">Adoption Application</button>
           </Link>
+          
+        ) : (
+          <p>You must be registered and logged in to access the Adoption
+          Application.  Links are at the top of the page.
+          </p>
+        )}
+          
+          
+          
           <p>&nbsp;</p>
           <p>&nbsp;</p>
           <h1 className="text-1xl font-black">Details:</h1>

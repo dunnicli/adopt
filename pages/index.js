@@ -37,14 +37,36 @@ function HomePage() {
     </figure>
     </Link>
     <p>&nbsp;</p>
-    
-    
-    <p>In publishing and graphic design, Lorem ipsum is a 
-    placeholder text commonly used to demonstrate the visual 
-    form of a document or a typeface without relying on meaningful 
-    content. Lorem ipsum may be used as a placeholder before 
-    final copy is available.</p>
+
+    <Link href="/shelterapi/thedogs">   
+    <p><u><b>View All Available Dogs</b></u></p>
+    </Link>
+    <p>&nbsp;</p>
+    Some dogs are only available for adoption in Puerto Vallarta.
+    You will see a PVOnly tag on the dogs page.
+    <p>&nbsp;</p>
+    Adoption Application links are on the dog&apos;s detail page.  
+    It is a big blue button.
+    <p>&nbsp;</p>
+
+    You must register and log in to apply for an adoption.  Register and 
+    login links are at the top of the page.
+    <p>&nbsp;</p>
+
+    <h1 className="text-1xl font-black">Adoption Fees</h1>
+            <p>&nbsp;</p>
+            <ul className="list-disc">
+            <li>Adoption Fees for Dogs:<br />
+            Mexico: $3,000 pesos<br />
+            US and Canada: $550 USD<br />&nbsp;</li>
+            <li>Note* Adoption fees may change without prior notice.</li>
+            </ul>
+            <p>&nbsp;</p>
+
+
     </div>
+
+
     <div className="p-2 rounded-md">
     <h1 className="text-1xl font-black">Cats Available</h1>
     <p>&nbsp;</p>
@@ -59,14 +81,35 @@ function HomePage() {
     </figure>
     </Link>
     <p>&nbsp;</p>
+
+    <Link href="/shelterapi/thecats">   
+    <p><u><b>View All Available Cats</b></u></p>
+    </Link>
+    <p>&nbsp;</p>
+    Some cats are only available for adoption in Puerto Vallarta.
+    You will see a PVOnly tag on the detail page.
+    <p>&nbsp;</p>
+    Adoption Application links are on the cat&apos;s detail page.  
+    It is a big blue button.
+    <p>&nbsp;</p>
+
+    You must register and log in to apply for an adoption.  Register and 
+    login links are at the top of the page.
+    <p>&nbsp;</p>
+    
+    <h1 className="text-1xl font-black">Adoption Fees</h1>
+            <p>&nbsp;</p>
+            <ul className="list-disc">
+            
+            <li>Adoption fee for Cats:<br />
+            US and Canada: $150 USD<br />&nbsp;</li>
+            <li>Note* Adoption fees may change without prior notice.</li>
+            </ul>
+            <p>&nbsp;</p>
+
     
     
     
-    <p>In publishing and graphic design, Lorem ipsum is a 
-    placeholder text commonly used to demonstrate the visual 
-    form of a document or a typeface without relying on meaningful 
-    content. Lorem ipsum may be used as a placeholder before 
-    final copy is available.</p>
     </div>
     <div className="p-2"> 
     <figure>
