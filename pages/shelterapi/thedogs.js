@@ -49,7 +49,7 @@ export default function DogsApi({ data }) {
       </p>
               
     <div className="card-actions justify-end">
-    <Link className="badge badge-outline" href={`/shelterapi/cat_details/${item.id}`}>Details</Link>  
+    <Link className="badge badge-outline" href={`/shelterapi/animal_details/${item.id}`}>Details</Link>  
     
       
     </div>
