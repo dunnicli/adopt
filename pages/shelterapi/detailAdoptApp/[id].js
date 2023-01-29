@@ -45,59 +45,165 @@ export default function AdoptAppDetail({ data }) {
           <h1 className="text-1xl font-black">Details:</h1>
           <p>&nbsp;</p>
           <ul>
-          <li>Full Name: {data.name}<br />
+          <li><small><b>Full Name:</b></small> {data.name}<br />
           &nbsp;
           </li>
-          <li>Email: {data.email}<br />
+          <li><small><b>Email:</b></small> {data.email}<br />
           &nbsp;
           </li>
-          <li>Street Address: {data.street}<br />
+          <li><small><b>Street Address:</b></small> {data.street}<br />
           &nbsp;
           </li>
-          <li>City: {data.city}<br />
+          <li><small><b>City:</b></small> {data.city}<br />
           &nbsp;
           </li>
-          <li>State / Province: {data.province}<br />
+          <li><small><b>State / Province:</b></small> {data.province}<br />
           &nbsp;
           </li>
-          <li>Postal Code: {data.postal}<br />
+          <li><small><b>Postal Code:</b></small> {data.postal}<br />
           &nbsp;
           </li>
-          <li>Home Phone: {data.homephone}<br />
+          <li><small><b>Home Phone:</b></small> {data.homephone}<br />
           &nbsp;
           </li>
-          <li>Cell Phone: {data.cellphone}<br />
+          <li><small><b>Cell Phone:</b></small> {data.cellphone}<br />
           &nbsp;
           </li>
-          <li>Employer: {data.employer}<br />
+          <li><small><b>Employer:</b></small> {data.employer}<br />
           &nbsp;
           </li>
-          <li>Work Phone: {data.workphone}<br />
+          <li><small><b>Work Phone:</b></small> {data.workphone}<br />
           &nbsp;
           </li>
-          <li>Can we contact you at work?: {data.cancontact}<br />
+          <li><small><b>Can we contact you at work?:</b></small> {data.cancontact}<br />
           &nbsp;
           </li>
-          <li>What kind of animal are you looking for?:<br />
+          <li><small><b>What kind of animal are you looking for?:</b></small><br />
            {data.whatKindAnimal}<br />
           &nbsp;
           </li>
-          <li>Notes:<br />
+          <li><small><b>Notes (private):</b></small><br />
           {data.notes}<br />
           &nbsp;
           </li>
-          <li>Adopter ID: {data.adopter_id}<br />
+          <li><small><b>Adopter ID:</b></small> {data.adopter_id}<br />
           &nbsp;
           </li>
-          
-          
-          
-          
+          <li><small><b>What reason could make you want to return 
+           a dog to the shelter?:</b></small><br />
+           {data.reasonReturn}<br />
+          &nbsp;
+          </li>
+          <li><small><b>Have you had pets in the past?:</b></small><br />
+          {data.petsPast}<br />
+          &nbsp;
+          </li>
+          <li><small><b>What pets do you currently have?:</b></small><br />
+          {data.petsNow}<br />
+          &nbsp;
+          </li>
+          <li><small><b>Are your pets up-to-date on vaccinations?:</b></small><br />
+          {data.petsVaxed}<br />
+          &nbsp;
+          </li>
+          <li><small><b>Would your pets accept a new dog or cat?:</b></small><br />
+          {data.petsAcceptNew}<br />
+          &nbsp;
+          </li>
+          <li><small><b>Where will the pet you are applying to adopt be 
+            kept during the day or when no one is at home? 
+            Where will it sleep? Where will it be when you are 
+            at home?</b></small><br />
+          {data.whereDuringDay}<br />
+          &nbsp;
+          </li>
+          <li><small><b>Have you ever housebroken a puppy or dog? How would 
+            you approach housebreaking a dog? Please explain in 
+            detail.  We do not know if they have been housebroken.</b></small>
+          <br />
+          {data.housebreaking}<br />
+          &nbsp;
+          </li>
+          <li><small><b>What will you feed your pet?  If a commercial food 
+            which brand?</b></small><br />
+          {data.whatFood}<br />
+          &nbsp;
+          </li>
+          <li><small><b>If it is a dog, what kind of exercise will the 
+            dog receive and how frequent?</b></small><br />
+          {data.whatExercise}<br />
+          &nbsp;
+          </li>
+          <li><small><b>If you travel, what arrangements do you make 
+            for the care of your pets?</b></small><br />
+          {data.travelHotel}<br />
+          &nbsp;
+          </li>
+          <li><small><b>Have you ever relinquished a pet to a shelter or 
+            rescue, or rehomed it? * If yes, please explain the 
+            circumstances.</b></small><br />
+          {data.sentBack}<br />
+          &nbsp;
+          </li>
+          <li><small><b>HOUSING INFORMATION: Do you own or rent?  Is it a 
+            house or apartment or condo? If renting, how long
+             have you lived at this address? *If renting, 
+             please provide landlord contact information.</b></small><br />
+          {data.housingStatus}<br />
+          &nbsp;
+          </li>
+          <li><small><b>If you are getting a dog, do you have a securely 
+            fenced yard? Small dog proof? Jumping dog proof?
+              What type of fencing?</b></small><br />
+          {data.secureYard}<br />
+          &nbsp;
+          </li>
+          <li><small><b>Are you planning on moving within the 
+          next months/years? </b></small><br />
+          {data.movingSoon}<br />
+          &nbsp;
+          </li>
+          <li><small><b>YOUR FAMILY:  How many adults are in your home? Children?
+          Is everyone living in your home agreeable to having a dog/cat?
+          How would you describe the activity level of your 
+          household? i.e. quiet, structured, busy, hectic etc...</b></small><br />
+          {data.yourFamily}<br />
+          &nbsp;
+          </li>
+          <li><small><b>Will it be an inside or outside dog / cat?</b></small><br />
+          {data.insideDog}<br />
+          &nbsp;
+          </li>
+          <li><small><b>Does anyone in your home have allergies? 
+            Please describe.</b></small><br />
+          {data.anyAllergies}<br />
+          &nbsp;
+          </li>
+          <li><small><b>What forms of discipline do you feel are 
+            appropriate for training or modifying behaviour in a 
+            dog?  Are you familiar with rewards-based training methods 
+            that do not involve physical force or dominance? </b></small><br />
+          {data.disciplineStyle}<br />
+          &nbsp;
+          </li>
+          <li><small><b>How much do you think you have to budget for expenses for 
+            the dog / cat on a yearly basis? Can you afford it?</b></small><br />
+          {data.budget}<br />
+          &nbsp;
+          </li>
+          <li><small><b>Comments or Questions? Please feel free to include any 
+            information that you feel we should know about you, your 
+            family, your experience with pets.</b></small><br />
+          {data.commentsQuestions}<br />
+          &nbsp;
+          </li>
+          <li><small><b>Please provide us with at least two references in 
+            addition to your vet. Please provide full name, telephone 
+            number(s) and relationship for all references.</b></small><br />
+          {data.twoRefs}<br />
+          &nbsp;
+          </li>
 
-          
-          
-          
-          
           
           
           <li>
@@ -105,6 +211,8 @@ export default function AdoptAppDetail({ data }) {
           href={`/shelterapi/editAdoptApp/${data.id}`}>Edit</Link>  
           </li>
           </ul>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
       </div>
           
       </div>

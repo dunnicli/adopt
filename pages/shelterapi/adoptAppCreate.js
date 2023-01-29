@@ -32,6 +32,28 @@ export default function AdoptAppCreate() {
     const nameAnimal = formData.nameAnimal;
     const whatKindAnimal = formData.whatKindAnimal;
     const notes = formData.notes;
+    const reasonReturn = formData.reasonReturn;
+    const petsPast = formData.petsPast;
+    const petsNow = formData.petsNow;
+    const petsVaxed = formData.petsVaxed;
+    const petsAcceptNew = formData.petsAcceptNew;
+    const whereDuringDay = formData.whereDuringDay;
+    const housebreaking = formData.housebreaking;
+    const whatFood = formData.whatFood;
+    const whatExercise = formData.whatExercise;
+    const travelHotel = formData.travelHotel;
+    const sentBack = formData.sentBack;
+    const housingStatus = formData.housingStatus;
+    const secureYard = formData.secureYard;
+    const movingSoon = formData.movingSoon;
+    const yourFamily = formData.yourFamily;
+    const insideDog = formData.insideDog;
+    const anyAllergies = formData.anyAllergies;
+    const disciplineStyle = formData.disciplineStyle;
+    const budget = formData.budget;
+    const commentsQuestions = formData.commentsQuestions;
+    const twoRefs = formData.twoRefs;
+
 
     
     //
@@ -52,6 +74,28 @@ export default function AdoptAppCreate() {
             whatKindAnimal,
             notes,
             adopter_id,
+            reasonReturn,
+            petsPast,
+            petsNow,
+            petsVaxed,
+            petsAcceptNew,
+            whereDuringDay,
+            housebreaking,
+            whatFood,
+            whatExercise,
+            travelHotel,
+            sentBack,
+            housingStatus,
+            secureYard,
+            movingSoon,
+            yourFamily,
+            insideDog,
+            anyAllergies,
+            disciplineStyle,
+            budget,
+            commentsQuestions,
+            twoRefs,
+
     };
   
   
@@ -168,7 +212,7 @@ export default function AdoptAppCreate() {
           </p>
           <p>&nbsp;</p>
           <p>
-            <b>Province</b>
+            <b>State</b>
             <br />
             <input
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -268,10 +312,6 @@ export default function AdoptAppCreate() {
             </select>
             </div>
            
-
-
-
-
           <p>&nbsp;</p>
           <p>
             <b>What kind of animal are you looking for?</b>
@@ -290,7 +330,7 @@ export default function AdoptAppCreate() {
           </p>
           <p>&nbsp;</p>
           <p>
-            <b>Notes</b>
+            <b>Notes (private - not sent with app)</b>
             <br />
             <textarea
               className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
@@ -301,6 +341,398 @@ export default function AdoptAppCreate() {
               placeholder="Notes here..."
               onChange={(e) =>
                 setFormData({ ...formData, notes: e.target.value })
+              }
+            />
+          </p>
+          <p>&nbsp;</p>
+          <p>
+            <b>What reasons would cause you to return the pet to us?:</b>
+            <br />
+            <textarea
+              className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
+              name="reasonReturn"
+              id=""
+              cols="40"
+              rows="2"
+              placeholder="reason here..."
+              onChange={(e) =>
+                setFormData({ ...formData, reasonReturn: e.target.value })
+              }
+            />
+          </p>
+          <p>&nbsp;</p>
+          <p>
+            <b>Have you had pets in the past? If so, please describe. 
+            Why are they no longer with you?</b>
+            <br />
+            <textarea
+              className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
+              name="petsPast"
+              id=""
+              cols="40"
+              rows="2"
+              placeholder="Past pets here ..."
+              onChange={(e) =>
+                setFormData({ ...formData, petsPast: e.target.value })
+              }
+            />
+          </p>
+          <p>&nbsp;</p>
+          <p>
+            <b>Please list pets you currently have in your home. 
+            Include the following information in your list. 
+            Dogs, cats comments on personality of each animal.  
+            Are your pets spayed/neutered? If no, please explain.</b>
+            <br />
+            <textarea
+              className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
+              name="petsNow"
+              id=""
+              cols="40"
+              rows="2"
+              placeholder="Current pets here ..."
+              onChange={(e) =>
+                setFormData({ ...formData, petsNow: e.target.value })
+              }
+            />
+          </p>
+          <p>&nbsp;</p>
+          <p>
+            <b>Are your pets up-to-date on vaccinations?  *The 
+            name and phone number of your veterinarian are 
+            mandatory*</b>
+            <br />
+            <textarea
+              className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
+              name="petsVaxed"
+              id=""
+              cols="40"
+              rows="4"
+              placeholder="Vaccinations yes or no.  Vet Info ..."
+              onChange={(e) =>
+                setFormData({ ...formData, petsVaxed: e.target.value })
+              }
+            />
+          </p>
+          <p>&nbsp;</p>
+          <p>
+            <b>Would your pets accept a new dog or cat? What exposure 
+            have they had with other pets in and out of your 
+            home? What is their behaviour like with other animals?</b>
+            <br />
+            <textarea
+              className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
+              name="petsAcceptNew"
+              id=""
+              cols="40"
+              rows="4"
+              placeholder="Will your pets accept a new family member ..."
+              onChange={(e) =>
+                setFormData({ ...formData, petsAcceptNew: e.target.value })
+              }
+            />
+          </p>
+          <p>&nbsp;</p>
+          <p>
+            <b>Where will the pet you are applying to adopt be 
+            kept during the day or when no one is at home? 
+            Where will it sleep? Where will it be when you are 
+            at home?</b>
+            <br />
+            <textarea
+              className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
+              name="whereDuringDay"
+              id=""
+              cols="40"
+              rows="4"
+              placeholder="Where will your pet be when you are at 
+              work, when no one is home, at night.  Where will it sleep?"
+              onChange={(e) =>
+                setFormData({ ...formData, whereDuringDay: e.target.value })
+              }
+            />
+          </p>
+          <p>&nbsp;</p>
+          <p>
+            <b>Have you ever housebroken a puppy or dog? How would 
+            you approach housebreaking a dog? Please explain in 
+            detail.  We do not know if they have been housebroken.
+          </b>
+            <br />
+            <textarea
+              className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
+              name="housebreaking"
+              id=""
+              cols="40"
+              rows="4"
+              placeholder="Housebreaking experience.."
+              onChange={(e) =>
+                setFormData({ ...formData, housebreaking: e.target.value })
+              }
+            />
+          </p>
+          <p>&nbsp;</p>
+          <p>
+            <b>What will you feed your pet?  If a commercial food 
+            which brand?
+          </b>
+            <br />
+            <textarea
+              className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
+              name="whatFood"
+              id=""
+              cols="40"
+              rows="2"
+              placeholder="Type of food here ..."
+              onChange={(e) =>
+                setFormData({ ...formData, whatFood: e.target.value })
+              }
+            />
+          </p>
+          <p>&nbsp;</p>
+          <p>
+            <b>If it is a dog, what kind of exercise and will the 
+            dog receive and how frequent??
+          </b>
+            <br />
+            <textarea
+              className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
+              name="whatExercise"
+              id=""
+              cols="40"
+              rows="2"
+              placeholder="Exercise here ..."
+              onChange={(e) =>
+                setFormData({ ...formData, whatExercise: e.target.value })
+              }
+            />
+          </p>
+          <p>&nbsp;</p>
+          <p>
+            <b>If you travel, what arrangements do you make 
+            for the care of your pets?
+          </b>
+            <br />
+            <textarea
+              className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
+              name="travelHotel"
+              id=""
+              cols="40"
+              rows="2"
+              placeholder="Travel arrangements here ..."
+              onChange={(e) =>
+                setFormData({ ...formData, travelHotel: e.target.value })
+              }
+            />
+          </p>
+          <p>&nbsp;</p>
+          <p>
+            <b>Have you ever relinquished a pet to a shelter or 
+            rescue, or rehomed it? * If yes, please explain the 
+            circumstances.
+          </b>
+            <br />
+            <textarea
+              className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
+              name="sentBack"
+              id=""
+              cols="40"
+              rows="2"
+              placeholder="Ever sent back to shelter ..."
+              onChange={(e) =>
+                setFormData({ ...formData, sentBack: e.target.value })
+              }
+            />
+          </p>
+          <p>&nbsp;</p>
+          <p>
+            <b>HOUSING INFORMATION: Do you own or rent?  Is it a 
+            house or apartment or condo? If renting, how long
+             have you lived at this address? *If renting, 
+             please provide landlord contact information
+
+          </b>
+            <br />
+            <textarea
+              className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
+              name="housingStatus"
+              id=""
+              cols="40"
+              rows="4"
+              placeholder="House or apartment or condo ..."
+              onChange={(e) =>
+                setFormData({ ...formData, housingStatus: e.target.value })
+              }
+            />
+          </p>
+          <p>&nbsp;</p>
+          <p>
+            <b>If you are getting a dog, do you have a securely 
+            fenced yard? Small dog proof? Jumping dog proof?
+              What type of fencing? 
+          </b>
+            <br />
+            <textarea
+              className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
+              name="secureYard"
+              id=""
+              cols="40"
+              rows="2"
+              placeholder="Secure yard here ..."
+              onChange={(e) =>
+                setFormData({ ...formData, secureYard: e.target.value })
+              }
+            />
+          </p>
+          <p>&nbsp;</p>
+          <p>
+            <b>Are you planning on moving within the next months/years? 
+          </b>
+            <br />
+            <textarea
+              className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
+              name="movingSoon"
+              id=""
+              cols="40"
+              rows="2"
+              placeholder="Moving soon?? ..."
+              onChange={(e) =>
+                setFormData({ ...formData, movingSoon: e.target.value })
+              }
+            />
+          </p>
+          <p>&nbsp;</p>
+          <p>
+            <b>YOUR FAMILY:  How many adults are in your home? Children?
+          Is everyone living in your home agreeable to having a dog/cat?
+          How would you describe the activity level of your 
+          household? i.e. quiet, structured, busy, hectic etc... 
+          
+          </b>
+            <br />
+            <textarea
+              className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
+              name="yourFamily"
+              id=""
+              cols="40"
+              rows="4"
+              placeholder="Who is in the house? ..."
+              onChange={(e) =>
+                setFormData({ ...formData, yourFamily: e.target.value })
+              }
+            />
+          </p>
+          <p>&nbsp;</p>
+          <p>
+            <b>Will it be an inside or outside dog / cat?
+          </b>
+            <br />
+            <textarea
+              className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
+              name="insideDog"
+              id=""
+              cols="40"
+              rows="2"
+              placeholder="Inside dog or outside only?  Same applies 
+              to cats ..."
+              onChange={(e) =>
+                setFormData({ ...formData, insideDog: e.target.value })
+              }
+            />
+          </p>
+          <p>&nbsp;</p>
+          <p>
+            <b>Does anyone in your home have allergies? 
+            Please describe.
+          </b>
+            <br />
+            <textarea
+              className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
+              name="anyAllergies"
+              id=""
+              cols="40"
+              rows="2"
+              placeholder="Anybody have allergies?"
+              onChange={(e) =>
+                setFormData({ ...formData, anyAllergies: e.target.value })
+              }
+            />
+          </p>
+          <p>&nbsp;</p>
+          <p>
+            <b>What forms of discipline do you feel are 
+            appropriate for training or modifying behaviour in a 
+            dog?  Are you familiar with rewards-based training methods 
+            that do not involve physical force or dominance? 
+          </b>
+            <br />
+            <textarea
+              className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
+              name="disciplineStyle"
+              id=""
+              cols="40"
+              rows="4"
+              placeholder="Discipline style here ..."
+              onChange={(e) =>
+                setFormData({ ...formData, disciplineStyle: e.target.value })
+              }
+            />
+          </p>
+          <p>&nbsp;</p>
+          <p>
+            <b>How much do you think you have to budget for expenses for 
+            the dog / cat on a yearly basis? Can you afford it?
+            
+          </b>
+            <br />
+            <textarea
+              className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
+              name="budget"
+              id=""
+              cols="40"
+              rows="2"
+              placeholder="Annual costs.  Food, vet, etc..."
+              onChange={(e) =>
+                setFormData({ ...formData, budget: e.target.value })
+              }
+            />
+          </p>
+          <p>&nbsp;</p>
+          <p>
+            <b>Comments or Questions? Please feel free to include any 
+            information that you feel we should know about you, your 
+            family, your experience with pets.
+            
+          </b>
+            <br />
+            <textarea
+              className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
+              name="commentsQuestions"
+              id=""
+              cols="40"
+              rows="4"
+              placeholder="Comments or Questions?"
+              onChange={(e) =>
+              setFormData({ ...formData, commentsQuestions: e.target.value })
+              }
+            />
+          </p>
+          <p>&nbsp;</p>
+          <p>
+            <b>Please provide us with at least two references in 
+            addition to your vet. Please provide full name, telephone 
+            number(s) and relationship for all references.            
+          </b>
+            <br />
+            <textarea
+              className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
+              name="twoRefs"
+              id=""
+              cols="40"
+              rows="4"
+              placeholder="Two references please."
+              onChange={(e) =>
+              setFormData({ ...formData, twoRefs: e.target.value })
               }
             />
           </p>
