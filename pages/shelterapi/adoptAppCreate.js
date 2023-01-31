@@ -491,7 +491,7 @@ export default function AdoptAppCreate() {
           </p>
           <p>&nbsp;</p>
           <p>
-            <b>If it is a dog, what kind of exercise and will the 
+            <b>If it is a dog, what kind of exercise will the 
             dog receive and how frequent??
           </b>
             <br />

@@ -32,6 +32,12 @@ export default function AdoptAppDetail({ data }) {
         <p>&nbsp;</p>
         <h1 className="text-3xl font-black">{data.name}</h1>
         <p>&nbsp;</p>
+        <p>To Adopt</p>
+        <h1 className="text-3xl font-black">{data.nameAnimal}</h1>
+        <p>&nbsp;</p>
+        <Link className="badge badge-outline" 
+          href={`/shelterapi/editAdoptApp/${data.id}`}>Edit</Link>  
+        <p>&nbsp;</p>
         
       </div>
 

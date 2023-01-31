@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
-import Head from "next/head";
 import Router from "next/router";
 import { useSession } from "next-auth/react";
+import Head from "next/head";
 
 
 
@@ -21,9 +21,17 @@ export default function EditApp({ data }) {
     const { editAppName, editAppEmail, editAppStreet, editAppProvince,  
         editAppNameAnimal, editAppCity, editAppPostal, editAppHomephone, 
       editAppCellphone, editAppEmployer, editAppWorkphone, editAppCancontact, 
-      editAppwhatKindAnimal, editAppNotes } =
+      editAppwhatKindAnimal, editAppNotes, editAppReasonReturn,
+    editAppPetsPast, editAppPetsNow, editAppPetsVaxed, editAppPetsAcceptNew,
+    editAppWhereDuringDay, editAppHousebreaking, editAppWhatFood, 
+    editAppWhatExercise, editAppTravelHotel, editAppSentBack, editAppHousingStatus,
+    editAppSecureYard, editAppMovingSoon, editAppYourFamily, editAppInsideDog, 
+    editAppAnyAllergies, editAppDisciplineStyle, editAppBudget, 
+    editAppCommentsQuestions, editAppTwoRefs } =
       formRef.current;
     
+      
+
     const id = parseInt(data.id);
     const name = editAppName.value;
     const email = editAppEmail.value;
@@ -39,7 +47,28 @@ export default function EditApp({ data }) {
     const cancontact = editAppCancontact.value;
     const whatKindAnimal = editAppwhatKindAnimal.value;
     const notes = editAppNotes.value;   
-    
+    const reasonReturn = editAppReasonReturn.value;
+    const petsPast = editAppPetsPast.value;
+    const petsNow = editAppPetsNow.value;
+    const petsVaxed = editAppPetsVaxed.value;
+    const petsAcceptNew = editAppPetsAcceptNew.value;
+    const whereDuringDay = editAppWhereDuringDay.value;
+    const housebreaking = editAppHousebreaking.value;
+    const whatFood = editAppWhatFood.value;
+    const whatExercise = editAppWhatExercise.value;
+    const travelHotel = editAppTravelHotel.value;
+    const sentBack = editAppSentBack.value;
+    const housingStatus = editAppHousingStatus.value;
+    const secureYard = editAppSecureYard.value;
+    const movingSoon = editAppMovingSoon.value;
+    const yourFamily = editAppYourFamily.value;
+    const insideDog = editAppInsideDog.value;
+    const anyAllergies = editAppAnyAllergies.value;
+    const disciplineStyle = editAppDisciplineStyle.value;
+    const budget = editAppBudget.value;
+    const commentsQuestions = editAppCommentsQuestions.value;
+    const twoRefs = editAppTwoRefs.value;
+        
     console.log("cancontact:", cancontact);  
 
     let formData = {
@@ -58,6 +87,28 @@ export default function EditApp({ data }) {
       cancontact,
       whatKindAnimal,
       notes,
+      reasonReturn,
+      petsPast,
+      petsNow,
+      petsVaxed,
+      petsAcceptNew,
+      whereDuringDay,
+      housebreaking,
+      whatFood,
+      whatExercise,
+      travelHotel,
+      sentBack,
+      housingStatus,
+      secureYard,
+      movingSoon,
+      yourFamily,
+      insideDog,
+      anyAllergies,
+      disciplineStyle,
+      budget,
+      commentsQuestions,
+      twoRefs,
+
       
     };
 
@@ -97,7 +148,7 @@ export default function EditApp({ data }) {
             className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
           >
             <div className="label">
-              <label>Full Name</label>
+              <label><b>Your Full Name</b></label>
               <br />
             </div>
             <div>
@@ -111,7 +162,7 @@ export default function EditApp({ data }) {
             </div>
 
             <div className="label">
-              <label>Animal Name</label>
+              <label><b>Name of the Animal That You Want to Adopt</b></label>
               <br />
             </div>
             <div>
@@ -125,7 +176,7 @@ export default function EditApp({ data }) {
             </div>
 
             <div className="label">
-              <label>Email</label>
+              <label><b>Email</b></label>
               <br />
             </div>
             <div>
@@ -139,7 +190,7 @@ export default function EditApp({ data }) {
             </div>
             <div>
             <div className="label">
-              <label>Street</label>
+              <label><b>Street Address</b></label>
               <br />
             </div>
             <div>
@@ -154,7 +205,7 @@ export default function EditApp({ data }) {
             </div>
 
             <div className="label">
-              <label>City</label>
+              <label><b>City</b></label>
               <br />
             </div>
             <div>
@@ -167,7 +218,7 @@ export default function EditApp({ data }) {
               <p>&nbsp;</p>
             </div>
             <div className="label">
-              <label>Province</label>
+              <label><b>State or Province</b></label>
               <br />
             </div>
             <div>
@@ -180,7 +231,7 @@ export default function EditApp({ data }) {
               <p>&nbsp;</p>
             </div>
             <div className="label">
-              <label>Postal Code</label>
+              <label><b>Postal Code</b></label>
               <br />
             </div>
             <div>
@@ -193,7 +244,7 @@ export default function EditApp({ data }) {
               <p>&nbsp;</p>
             </div>
             <div className="label">
-              <label>Home Phone</label>
+              <label><b>Home Phone</b></label>
               <br />
             </div>
             <div>
@@ -206,7 +257,7 @@ export default function EditApp({ data }) {
               <p>&nbsp;</p>
             </div>
             <div className="label">
-              <label>Cell Phone</label>
+              <label><b>Cell Phone</b></label>
               <br />
             </div>
             <div>
@@ -219,7 +270,7 @@ export default function EditApp({ data }) {
               <p>&nbsp;</p>
             </div>
             <div className="label">
-              <label>Employer</label>
+              <label><b>Employer</b></label>
               <br />
             </div>
             <div>
@@ -232,7 +283,7 @@ export default function EditApp({ data }) {
               <p>&nbsp;</p>
             </div>
             <div className="label">
-              <label>Work Phone</label>
+              <label><b>Work Phone</b></label>
               <br />
             </div>
             <div>
@@ -246,7 +297,7 @@ export default function EditApp({ data }) {
             </div>
             
             <div className="label">
-              <label>Can we contact you at work?</label>
+              <label><b>Can we contact you at work?</b></label>
               <br />
             </div>
             <div>
@@ -263,7 +314,7 @@ export default function EditApp({ data }) {
            
 
             <div className="label">
-              <label>What kind of animal?</label>
+              <label><b>What kind of animal are you looking for?</b></label>
               <br />
             </div>
             <div>
@@ -277,7 +328,7 @@ export default function EditApp({ data }) {
           </div>
 
           <div className="label">
-              <label>Notes</label>
+              <label><b>Notes</b></label>
               <br />
             </div>
             <div>
@@ -289,6 +340,379 @@ export default function EditApp({ data }) {
               defaultValue={data?.notes}
               />
           </div>
+
+          <p>&nbsp;</p>
+          <p>
+            <b>What reasons would cause you to return the pet to us?:</b>
+            <br />
+            <textarea
+              className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
+              name="editAppReasonReturn"
+              id=""
+              cols="40"
+              rows="2"
+              defaultValue={data?.reasonReturn}
+              placeholder="reason here..."
+              
+            />
+          </p>
+          <p>&nbsp;</p>
+          <p>
+            <b>Have you had pets in the past? If so, please describe. 
+            Why are they no longer with you?</b>
+            <br />
+            <textarea
+              className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
+              name="editAppPetsPast"
+              id=""
+              cols="40"
+              rows="2"
+              defaultValue={data?.petsPast}
+              placeholder="Past pets here ..."
+              
+            />
+          </p>
+          <p>&nbsp;</p>
+          <p>
+            <b>Please list pets you currently have in your home. 
+            Include the following information in your list. 
+            Dogs, cats comments on personality of each animal.  
+            Are your pets spayed/neutered? If no, please explain.</b>
+            <br />
+            <textarea
+              className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
+              name="editAppPetsNow"
+              id=""
+              cols="40"
+              rows="2"
+              placeholder="Current pets here ..."
+              defaultValue={data?.petsNow}
+              
+            />
+          </p>
+          <p>&nbsp;</p>
+          <p>
+            <b>Are your pets up-to-date on vaccinations?  *The 
+            name and phone number of your veterinarian are 
+            mandatory*</b>
+            <br />
+            <textarea
+              className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
+              name="editAppPetsVaxed"
+              id=""
+              cols="40"
+              rows="4"
+              placeholder="Vaccinations yes or no.  Vet Info ..."
+              defaultValue={data?.petsVaxed}
+              
+            />
+          </p>
+          <p>&nbsp;</p>
+          <p>
+            <b>Would your pets accept a new dog or cat? What exposure 
+            have they had with other pets in and out of your 
+            home? What is their behaviour like with other animals?</b>
+            <br />
+            <textarea
+              className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
+              name="editAppPetsAcceptNew"
+              id=""
+              cols="40"
+              rows="4"
+              placeholder="Will your pets accept a new family member ..."
+              defaultValue={data?.petsAcceptNew}
+              
+            />
+          </p>
+          <p>&nbsp;</p>
+          <p>
+            <b>Where will the pet you are applying to adopt be 
+            kept during the day or when no one is at home? 
+            Where will it sleep? Where will it be when you are 
+            at home?</b>
+            <br />
+            <textarea
+              className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
+              name="editAppWhereDuringDay"
+              id=""
+              cols="40"
+              rows="4"
+              placeholder="Where will your pet be when you are at 
+              work, when no one is home, at night.  Where will it sleep?"
+              defaultValue={data?.whereDuringDay}
+              
+            />
+          </p>
+          <p>&nbsp;</p>
+          <p>
+            <b>Have you ever housebroken a puppy or dog? How would 
+            you approach housebreaking a dog? Please explain in 
+            detail.  We do not know if they have been housebroken.
+          </b>
+            <br />
+            <textarea
+              className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
+              name="editAppHousebreaking"
+              id=""
+              cols="40"
+              rows="4"
+              placeholder="Housebreaking experience.."
+              defaultValue={data?.housebreaking}
+              
+            />
+          </p>
+          <p>&nbsp;</p>
+          <p>
+            <b>What will you feed your pet?  If a commercial food 
+            which brand?
+          </b>
+            <br />
+            <textarea
+              className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
+              name="editAppWhatFood"
+              id=""
+              cols="40"
+              rows="2"
+              placeholder="Type of food here ..."
+              defaultValue={data?.whatFood}
+              
+            />
+          </p>
+          <p>&nbsp;</p>
+          <p>
+            <b>If it is a dog, what kind of exercise will the 
+            dog receive and how frequent??
+          </b>
+            <br />
+            <textarea
+              className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
+              name="editAppWhatExercise"
+              id=""
+              cols="40"
+              rows="2"
+              placeholder="Exercise here ..."
+              defaultValue={data?.whatExercise}
+              
+            />
+          </p>
+          <p>&nbsp;</p>
+          <p>
+            <b>If you travel, what arrangements do you make 
+            for the care of your pets?
+          </b>
+            <br />
+            <textarea
+              className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
+              name="editAppTravelHotel"
+              id=""
+              cols="40"
+              rows="2"
+              placeholder="Travel arrangements here ..."
+              defaultValue={data?.travelHotel}
+              
+            />
+          </p>
+          <p>&nbsp;</p>
+          <p>
+            <b>Have you ever relinquished a pet to a shelter or 
+            rescue, or rehomed it? * If yes, please explain the 
+            circumstances.
+          </b>
+            <br />
+            <textarea
+              className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
+              name="editAppSentBack"
+              id=""
+              cols="40"
+              rows="2"
+              placeholder="Ever sent back to shelter ..."
+              defaultValue={data?.sentBack}
+              
+            />
+          </p>
+          <p>&nbsp;</p>
+          <p>
+            <b>HOUSING INFORMATION: Do you own or rent?  Is it a 
+            house or apartment or condo? If renting, how long
+             have you lived at this address? *If renting, 
+             please provide landlord contact information
+
+          </b>
+            <br />
+            <textarea
+              className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
+              name="editAppHousingStatus"
+              id=""
+              cols="40"
+              rows="4"
+              placeholder="House or apartment or condo ..."
+              defaultValue={data?.housingStatus}
+              
+            />
+          </p>
+          <p>&nbsp;</p>
+          <p>
+            <b>If you are getting a dog, do you have a securely 
+            fenced yard? Small dog proof? Jumping dog proof?
+              What type of fencing? 
+          </b>
+            <br />
+            <textarea
+              className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
+              name="editAppSecureYard"
+              id=""
+              cols="40"
+              rows="2"
+              placeholder="Secure yard here ..."
+              defaultValue={data?.secureYard}
+              
+            />
+          </p>
+          <p>&nbsp;</p>
+          <p>
+            <b>Are you planning on moving within the next months/years? 
+          </b>
+            <br />
+            <textarea
+              className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
+              name="editAppMovingSoon"
+              id=""
+              cols="40"
+              rows="2"
+              placeholder="Moving soon?? ..."
+              defaultValue={data?.movingSoon}
+              
+            />
+          </p>
+          <p>&nbsp;</p>
+          <p>
+            <b>YOUR FAMILY:  How many adults are in your home? Children?
+          Is everyone living in your home agreeable to having a dog/cat?
+          How would you describe the activity level of your 
+          household? i.e. quiet, structured, busy, hectic etc... 
+          
+          </b>
+            <br />
+            <textarea
+              className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
+              name="editAppYourFamily"
+              id=""
+              cols="40"
+              rows="4"
+              placeholder="Who is in the house? ..."
+              defaultValue={data?.yourFamily}
+              
+            />
+          </p>
+          <p>&nbsp;</p>
+          <p>
+            <b>Will it be an inside or outside dog / cat?
+          </b>
+            <br />
+            <textarea
+              className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
+              name="editAppInsideDog"
+              id=""
+              cols="40"
+              rows="2"
+              placeholder="Inside dog or outside only?  Same applies 
+              to cats ..."
+              defaultValue={data?.insideDog}
+              
+            />
+          </p>
+          <p>&nbsp;</p>
+          <p>
+            <b>Does anyone in your home have allergies? 
+            Please describe.
+          </b>
+            <br />
+            <textarea
+              className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
+              name="editAppAnyAllergies"
+              id=""
+              cols="40"
+              rows="2"
+              placeholder="Anybody have allergies?"
+              defaultValue={data?.anyAllergies}
+              
+            />
+          </p>
+          <p>&nbsp;</p>
+          <p>
+            <b>What forms of discipline do you feel are 
+            appropriate for training or modifying behaviour in a 
+            dog?  Are you familiar with rewards-based training methods 
+            that do not involve physical force or dominance? 
+          </b>
+            <br />
+            <textarea
+              className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
+              name="editAppDisciplineStyle"
+              id=""
+              cols="40"
+              rows="4"
+              placeholder="Discipline style here ..."
+              defaultValue={data?.disciplineStyle}
+              
+            />
+          </p>
+          <p>&nbsp;</p>
+          <p>
+            <b>How much do you think you have to budget for expenses for 
+            the dog / cat on a yearly basis? Can you afford it?
+            
+          </b>
+            <br />
+            <textarea
+              className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
+              name="editAppBudget"
+              id=""
+              cols="40"
+              rows="2"
+              placeholder="Annual costs.  Food, vet, etc..."
+              defaultValue={data?.budget}
+              
+            />
+          </p>
+          <p>&nbsp;</p>
+          <p>
+            <b>Comments or Questions? Please feel free to include any 
+            information that you feel we should know about you, your 
+            family, your experience with pets.
+            
+          </b>
+            <br />
+            <textarea
+              className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
+              name="editAppCommentsQuestions"
+              id=""
+              cols="40"
+              rows="4"
+              placeholder="Comments or Questions?"
+              defaultValue={data?.commentsQuestions}
+              
+            />
+          </p>
+          <p>&nbsp;</p>
+          <p>
+            <b>Please provide us with at least two references in 
+            addition to your vet. Please provide full name, telephone 
+            number(s) and relationship for all references.            
+          </b>
+            <br />
+            <textarea
+              className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none"
+              name="editAppTwoRefs"
+              id=""
+              cols="40"
+              rows="4"
+              placeholder="Two references please."
+              defaultValue={data?.twoRefs}
+              
+            />
+          </p>
+          
             
           </form>
         </div>
