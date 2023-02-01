@@ -42,6 +42,7 @@ export default function ShelterApi({data, thekey}) {
             <li key={item.id}>
             {item.adopter_id == myid && (  
             <div>
+              Submission Status: <b>{item.publishStatus}</b><br />
               <b>Full Name: {item.name}</b>
               <br />
               <p>Animal Name: {item.nameAnimal}</p>

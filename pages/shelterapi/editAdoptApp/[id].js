@@ -27,7 +27,7 @@ export default function EditApp({ data }) {
     editAppWhatExercise, editAppTravelHotel, editAppSentBack, editAppHousingStatus,
     editAppSecureYard, editAppMovingSoon, editAppYourFamily, editAppInsideDog, 
     editAppAnyAllergies, editAppDisciplineStyle, editAppBudget, 
-    editAppCommentsQuestions, editAppTwoRefs } =
+    editAppCommentsQuestions, editAppTwoRefs, editAppPublishStatus } =
       formRef.current;
     
       
@@ -68,6 +68,7 @@ export default function EditApp({ data }) {
     const budget = editAppBudget.value;
     const commentsQuestions = editAppCommentsQuestions.value;
     const twoRefs = editAppTwoRefs.value;
+    const publishStatus = editAppPublishStatus.value;
         
     console.log("cancontact:", cancontact);  
 
@@ -108,6 +109,7 @@ export default function EditApp({ data }) {
       budget,
       commentsQuestions,
       twoRefs,
+      publishStatus,
 
       
     };
@@ -121,7 +123,7 @@ export default function EditApp({ data }) {
       },
     });
     setDisable(false);
-    return await response.json(), await Router.push("/shelterapi/appList");
+    return await response.json(), await Router.push(`/shelterapi/myapps/?key=${session.id}`);
     
   }
 
@@ -712,6 +714,26 @@ export default function EditApp({ data }) {
               
             />
           </p>
+
+          <p>&nbsp;</p>
+          <div className="label">
+              <label><b>Application Submission Status:</b></label>
+              <br />
+            </div>
+            <div>
+            <select id="publishStatus" 
+            name="editAppPublishStatus"
+            defaultValue={data?.publishStatus}
+            
+            >
+            <option value="">Select Here</option>
+            <option value="Draft">Draft</option>
+            <option value="Published">Published</option>
+            </select>
+            </div>
+          
+            <p>&nbsp;</p>
+          
           
             
           </form>

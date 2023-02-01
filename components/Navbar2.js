@@ -33,6 +33,13 @@ function Navbar() {
     <Link className="bg-white inline-block border-l border-t border-r rounded-t py-2 px-4 text-blue-700 font-semibold" href="/">Home</Link>
     <Link className="bg-white inline-block border-l border-t border-r rounded-t py-2 px-4 text-blue-700 font-semibold" href="/shelterapi/thedogs">Dogs</Link>
     <Link className="bg-white inline-block border-l border-t border-r rounded-t py-2 px-4 text-blue-700 font-semibold" href="/shelterapi/thecats">Cats</Link>
+    
+    {session && (
+      <Link 
+      className="bg-white inline-block border-l border-t border-r rounded-t py-2 px-4 text-blue-700 font-semibold"
+      href={`/shelterapi/myapps/?key=${session.id}`}>My Apps</Link>
+    )}
+
     {   session && session.isAdmin && (
         <Link className="bg-white inline-block border-l border-t border-r rounded-t py-2 px-4 text-blue-700 font-semibold" href="/manager">Manager</Link>
   

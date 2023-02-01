@@ -29,6 +29,7 @@ export default function AdoptAppDetail({ data }) {
       <div className="flex gap-10 flex-wrap">
 
         <div className="w-96 p-5">
+        <p>Submission Status: <b>{data.publishStatus}</b></p>
         <p>&nbsp;</p>
         <h1 className="text-3xl font-black">{data.name}</h1>
         <p>&nbsp;</p>
