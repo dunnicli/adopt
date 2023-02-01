@@ -53,6 +53,7 @@ export default function AdoptAppCreate() {
     const budget = formData.budget;
     const commentsQuestions = formData.commentsQuestions;
     const twoRefs = formData.twoRefs;
+    const publishStatus = formData.publishStatus;
 
 
     
@@ -95,6 +96,7 @@ export default function AdoptAppCreate() {
             budget,
             commentsQuestions,
             twoRefs,
+            publishStatus,
 
     };
   
@@ -129,6 +131,8 @@ export default function AdoptAppCreate() {
       </Head>
 
       <main className="main">
+      <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8">
+    <div className="p-2 rounded-md">
         <p>{myid}</p>
         <div className="page-nav">
           <h3 className="text-4xl font-bold">New Adoption Application</h3>
@@ -736,7 +740,27 @@ export default function AdoptAppCreate() {
               }
             />
           </p>
+
+          <p>&nbsp;</p>
+          <div className="label">
+              <label><b>Application Submission Status:</b></label>
+              <br />
+            </div>
+            <div>
+            <select id="publishStatus" 
+            name="publishStatus"
+            defaultValue="Draft"
+            onChange={(e) =>
+                setFormData({ ...formData, publishStatus: e.target.value })
+              }
+            >
+            <option value="">Select Here</option>
+            <option value="Draft">Draft</option>
+            <option value="Published">Published</option>
+            </select>
+            </div>
           
+            <p>&nbsp;</p>
           <p>&nbsp;</p>
           <ToastContainer />
           <p>
@@ -748,6 +772,29 @@ export default function AdoptAppCreate() {
             </button>
           </p>
         </form>
+        </div>
+        <div className="p-2 rounded-md">      
+              <h1 className="text-1xl font-bold">Take your time filling out the App!</h1>
+              <p>&nbsp;</p>
+              <ul className="list-disc">
+              <li>Save it any time and come back later<br />&nbsp;</li>
+              <li>By default you are in draft mode<br />&nbsp;</li>
+              <li>When you are done - changing the setting above the save 
+              button to publish<br />&nbsp;</li>
+              <li>When you set your app to publish that will trigger 
+              us to review it.<br />&nbsp;</li>
+              <li>Good luck and thank you for your willingness to adopt!<br />&nbsp;</li>
+
+              </ul>
+
+              <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          
+
+              </div>      
+        </div>
       </main>
     </div>
   );
