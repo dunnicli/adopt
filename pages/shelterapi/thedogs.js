@@ -82,7 +82,7 @@ export default function DogsApi({ data }) {
             <p>&nbsp;</p>
 
             
-            <h1 className="text-1xl font-black">Mexico and USA Residents:</h1>
+            <h1 className="text-1xl font-black">Dogs and Cats - Mexico and USA Residents:</h1>
             <p>&nbsp;</p>
             <ul className="list-disc">
             <li>
@@ -93,7 +93,7 @@ export default function DogsApi({ data }) {
             </ul>
             
             <p>&nbsp;</p>
-            <h1 className="text-1xl font-black">Canada Residents:</h1>
+            <h1 className="text-1xl font-black">Dogs - Canada Residents:</h1>
             <p>&nbsp;</p>
             <ul className="list-disc">
             <li>
@@ -109,7 +109,8 @@ export default function DogsApi({ data }) {
             </Link>
             <br />&nbsp;
             </li>
-              <li>        
+              <li>    
+              <h1 className="text-1xl font-black">Cats - Canada Residents:</h1>            
             If you are in Canada and want to adopt one of 
             our cats, use this website and the online Adoption 
             Application.  

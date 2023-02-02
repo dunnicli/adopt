@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Head from "next/head";
 import { useState } from "react";
 import Router from "next/router";
@@ -786,6 +787,94 @@ export default function AdoptAppCreate() {
               <li>Good luck and thank you for your willingness to adopt!<br />&nbsp;</li>
 
               </ul>
+
+              <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <h1 className="text-2xl font-black">HOW THIS WORKS:</h1>
+            <p>
+            Once you have determined the specific animal you wish 
+            to adopt, you are ready to start on this Adoption Application.
+            </p>
+            <p>&nbsp;</p>
+
+            
+            <h1 className="text-1xl font-black">Dogs and Cats - Mexico and USA Residents:</h1>
+            <p>&nbsp;</p>
+            <ul className="list-disc">
+            <li>
+            If you want to adopt one of our dogs or cats, and you 
+            are a resident of Mexico or the United States, use this 
+            Adoption Application.
+            </li>
+            </ul>
+            
+            <p>&nbsp;</p>
+            <h1 className="text-1xl font-black">Dogs - Canada Residents:</h1>
+            <p>&nbsp;</p>
+            <ul className="list-disc">
+            <li>
+            If you are a resident of Canada and you want to adopt 
+            one of our dogs, do not use this form.  Please use the PVCA Adoption 
+            Application linked below.  You can download the form, 
+            fill it out and email it to us at spcapv@gmail.com.
+            <br />&nbsp;
+            </li>
+            <li>
+            <Link href="https://spcapvr.com/wp-content/uploads/2022/08/ADOPTION-APPLICATION.pdf">
+            <u><b>Canada PVCA Addoption Application - Dogs - Download</b></u>
+            </Link>
+            <br />&nbsp;
+            </li>
+              <li>    
+              <h1 className="text-1xl font-black">Cats - Canada Residents:</h1>            
+            If you are in Canada and want to adopt one of 
+            our cats, use this online Adoption Application.  
+            </li>
+            </ul>
+            <p>&nbsp;</p>
+
+            <h1 className="text-1xl font-black">Adoption Fees</h1>
+            <p>&nbsp;</p>
+            <ul className="list-disc">
+            <li>Adoption Fees for Dogs:<br />
+            Mexico: $3,000 pesos<br />
+            US and Canada: $550 USD<br />&nbsp;</li>
+            
+            <li>Adoption fee for Cats:<br />
+            US and Canada: $150 USD<br />&nbsp;</li>
+            <li>Note* Adoption fees may change without prior notice.</li>
+            </ul>
+            <p>&nbsp;</p>
+
+            <p>Please be thorough on your application and submit it for
+            review.  Save it and come back to it later if you need to.  Remember 
+            your password so you can come back to it later.
+            </p>
+            <p>&nbsp;</p>
+            <ul className="list-disc">
+            <li>Once your application has been reviewed, we will 
+            be in contact. Please allow us a few days of review 
+            before expecting to hear from us. Be aware that 
+            there may be additional contact required, such as a 
+            home visit before the adoption is approved. 
+            Please understand that we want to make sure this is 
+            a perfect fit for you as well as our rescue.
+            <br />&nbsp;</li>
+
+            <li>We will guide you through the transport process if 
+            necessary and provide you with all the necessary 
+            veterinary records regarding vaccinations, etc.
+            <br />&nbsp;</li>
+
+            <li>
+            You will also need to agree to the terms of our 
+            ADOPTION CONTRACT. Important to note that if any of 
+            the terms of the contract are not honored it will 
+            be considered a breach of contract, invalidating it 
+            and allowing for retrieval of the animal back to the 
+            SPCA PV.
+            <br />&nbsp;</li>
+            </ul>
 
               <p>&nbsp;</p>
           <p>&nbsp;</p>

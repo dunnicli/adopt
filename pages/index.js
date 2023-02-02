@@ -123,7 +123,34 @@ function HomePage() {
     <p>&nbsp;</p>
 
     <h1 className="text-1xl font-black">Adoption Center - SPCAPV</h1>
-    
+
+    <p>&nbsp;</p>
+
+    {session ? (
+            <Link href="/shelterapi/adoptAppCreate">
+          <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg btn-primary">Adoption Application</button>
+          <br /><br />
+          </Link>
+          
+
+          
+        ) : (
+          <p>You must be registered and logged in to access the Adoption
+          Application.  Links are at the top of the page.<br /><br />
+          Feel free to browse the available dogs and cats.  We never use your 
+          registration information for anything other than the adoption process.
+          </p>
+          
+        )}
+
+  {session && session.isAdmin && (
+  <div className="page-nav">
+  <Link href={`/shelterapi/atest`}>A Test</Link>
+  
+  </div>
+  )}
+  
+
   <p>&nbsp;</p>
   {session && (
   <div className="page-nav">

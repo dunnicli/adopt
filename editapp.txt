@@ -128,7 +128,7 @@ export default function EditApp({ data }) {
   }
 
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <Head>
       {data.adopter_id == myid && (
         <title>Edit: {data?.name} </title>
@@ -137,11 +137,8 @@ export default function EditApp({ data }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {data.adopter_id == myid && (
-      <main>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 lg:gap-8">
-    <div className="p-2 rounded-md">
-    {/* This is the left column */} 
-  
+      <main className="container">
+        <div>
           <div>
             <p>&nbsp;</p>
             <div className="page-nav">
@@ -740,9 +737,7 @@ export default function EditApp({ data }) {
           
             
           </form>
-        
-
-
+        </div>
         <div>
           <button
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
@@ -752,39 +747,7 @@ export default function EditApp({ data }) {
             Save
           </button>
         </div>
-        </div>
-
-        <div className="p-2">
-          
-          {/* This is the right column */} 
-
-          <h1 className="text-1xl font-bold">Take your time filling out the App!</h1>
-              <p>&nbsp;</p>
-              <ul className="list-disc">
-              <li>Save it any time and come back later<br />&nbsp;</li>
-              <li>By default you are in draft mode<br />&nbsp;</li>
-              <li>When you are done - changing the setting above the save 
-              button to publish<br />&nbsp;</li>
-              <li>When you set your app to publish that will trigger 
-              us to review it.<br />&nbsp;</li>
-              <li>Good luck and thank you for your willingness to adopt!<br />&nbsp;</li>
-
-              </ul>
-
-              <p>&nbsp;</p>
-          <p>&nbsp;</p>
-          <p>&nbsp;</p>
-          <p>&nbsp;</p>
-          
-
-
-
-        </div>
-        </div>
-      
       </main>
-        
-
       )}
       <footer className="text-center font-bold text-xl">
         <b>SPCAPV 2023</b>
