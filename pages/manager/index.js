@@ -64,6 +64,12 @@ function Manager() {
           <Link href="/shelterapi/thecats">The Cats</Link>
         </div>
   <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+        <div className="page-nav">
+          <Link href="/shelterapi/thedogs">The Dogs</Link>
+        </div>
+  <p>&nbsp;</p>
 
    <div>
     <ul>
