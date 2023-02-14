@@ -43,16 +43,19 @@ export default function ShelterApi({data, thekey}) {
             {item.adopter_id == myid && (  
             <div>
               Submission Status: <b>{item.publishStatus}</b><br />
-              <b>Full Name: {item.name}</b>
+              <Link href={`/shelterapi/detailAdoptApp/${item.id}`}>
+              Adopter: <b className="text-blue-900"><u>{item.name}</u></b>
+                </Link> &nbsp; 
+              
               <br />
               <p>Animal Name: {item.nameAnimal}</p>
               <p>Email: {item.email}</p>
               <p>ID: {item.id}</p>
               
               <div className="page-nav">
-                <Link href={`/shelterapi/detailAdoptApp/${item.id}`}>
-                  Details
-                </Link>
+              <Link className="badge badge-warning" 
+          href={`/shelterapi/editAdoptApp/${item.id}`}>Edit</Link>  &nbsp; 
+              
               </div>
               <p>&nbsp;</p>
               </div>
