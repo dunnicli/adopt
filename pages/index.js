@@ -24,6 +24,20 @@ function HomePage() {
   <p>&nbsp;</p>  
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8">
     <div className="p-2 rounded-md">
+    {!session && (
+    <div>
+    <button onClick={() => signIn(undefined, { callbackUrl: '/' })} 
+    className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg btn-primary"
+    >
+    Log In
+    </button>  
+    <br /><br />
+    You must registered and logged in to apply for an adoption.  It is easy and 
+    we do not share your information with anyone.
+    <p>&nbsp;</p>
+    
+     </div>
+    )}
     <h1 className="text-1xl font-black">Dogs Available</h1>
     <p>&nbsp;</p>
     <Link href="/shelterapi/thedogs">
@@ -49,9 +63,7 @@ function HomePage() {
     It is a big blue button.
     <p>&nbsp;</p>
 
-    You must register and log in to apply for an adoption.  Register and 
-    login links are at the top of the page.
-    <p>&nbsp;</p>
+    
 
     <h1 className="text-1xl font-black">Adoption Fees</h1>
             <p>&nbsp;</p>
@@ -68,6 +80,18 @@ function HomePage() {
 
 
     <div className="p-2 rounded-md">
+    {!session && (
+    <div>
+    <button onClick={() => { router.push("/register");
+            }} 
+    className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg btn-secondary"
+    >
+    Register!
+    </button>  
+    <br /><br />
+    
+     </div>
+    )}
     <h1 className="text-1xl font-black">Cats Available</h1>
     <p>&nbsp;</p>
     <Link href="/shelterapi/thecats">
@@ -93,9 +117,6 @@ function HomePage() {
     It is a big blue button.
     <p>&nbsp;</p>
 
-    You must register and log in to apply for an adoption.  Register and 
-    login links are at the top of the page.
-    <p>&nbsp;</p>
     
     <h1 className="text-1xl font-black">Adoption Fees</h1>
             <p>&nbsp;</p>
@@ -143,25 +164,12 @@ function HomePage() {
           
         )}
 
-  {session && session.isAdmin && (
-  <div className="page-nav">
-  <Link href={`/shelterapi/atest`}>A Test</Link>
-  
-  </div>
-  )}
   
 
   <p>&nbsp;</p>
   {session && (
   <div className="page-nav">
   <Link href={`/shelterapi/myapps/?key=${session.id}`}>My Applications</Link>
-  
-  </div>
-  )}
-  <p>&nbsp;</p>
-  {session && session.isAdmin && (
-  <div className="page-nav">
-  <Link href={`/shelterapi/appList`}>All Applications</Link>
   
   </div>
   )}
@@ -173,11 +181,6 @@ function HomePage() {
   )}
 
   <p>&nbsp;</p>
-  {session ? (
-          <button onClick={() => signOut({ callbackUrl: '/' })}>Log out</button>
-        ) : (
-          <button onClick={() => signIn(undefined, { callbackUrl: '/' })}>Log In</button>  
-        )}
   
 
   <p>&nbsp;</p>

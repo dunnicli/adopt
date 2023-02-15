@@ -62,11 +62,8 @@ function Navbar() {
         
     &nbsp; &nbsp; &nbsp;    
  {!session && (
-  <button
-            onClick={() => {
-              router.push("/register");
-            }}
-          >
+  <button onClick={() => { router.push("/register");
+            }}>
             Register
           </button>
   )}     
