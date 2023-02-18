@@ -52,7 +52,7 @@ export default function AdoptAppDetail({ data }) {
           <li><small><b>Street Address:</b></small> {data.street}<br />
           &nbsp;
           </li>
-          <li><small><b>City:</b></small> {data.city}<br />
+          <li><small><b>Colonia and City:</b></small> {data.city}<br />
           &nbsp;
           </li>
           <li><small><b>State / Province:</b></small> {data.province}<br />
@@ -161,7 +161,8 @@ export default function AdoptAppDetail({ data }) {
           {data.movingSoon}<br />
           &nbsp;
           </li>
-          <li><small><b>YOUR FAMILY:  How many adults are in your home? Children?
+          <li><small><b>YOUR FAMILY:  First name and age of each adult in 
+          your home? First name and age of each child in the home?  
           Is everyone living in your home agreeable to having a dog/cat?
           How would you describe the activity level of your 
           household? i.e. quiet, structured, busy, hectic etc...</b></small><br />

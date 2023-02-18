@@ -210,7 +210,7 @@ export default function EditApp({ data }) {
             </div>
 
             <div className="label">
-              <label><b>City</b></label>
+              <label><b>Colonia and City</b></label>
               <br />
             </div>
             <div>
@@ -591,7 +591,8 @@ export default function EditApp({ data }) {
           </p>
           <p>&nbsp;</p>
           <p>
-            <b>YOUR FAMILY:  How many adults are in your home? Children?
+            <b>YOUR FAMILY:  First name and age of each adult 
+            in your home? First name and age of each child in the home?
           Is everyone living in your home agreeable to having a dog/cat?
           How would you describe the activity level of your 
           household? i.e. quiet, structured, busy, hectic etc... 

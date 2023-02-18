@@ -203,12 +203,12 @@ export default function AdoptAppCreate() {
           </p>
           <p>&nbsp;</p>
           <p>
-            <b>City</b>
+            <b>Colonia and City</b>
             <br />
             <input
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               type="text"
-              placeholder="City"
+              placeholder="Colonia and City"
               name="city"
               onChange={(e) =>
                 setFormData({ ...formData, city: e.target.value })
@@ -217,7 +217,7 @@ export default function AdoptAppCreate() {
           </p>
           <p>&nbsp;</p>
           <p>
-            <b>State</b>
+            <b>State / Province</b>
             <br />
             <input
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -608,7 +608,8 @@ export default function AdoptAppCreate() {
           </p>
           <p>&nbsp;</p>
           <p>
-            <b>YOUR FAMILY:  How many adults are in your home? Children?
+            <b>YOUR FAMILY:  First name and age of each adult in your home? 
+            First name and age of each child in the home?  
           Is everyone living in your home agreeable to having a dog/cat?
           How would you describe the activity level of your 
           household? i.e. quiet, structured, busy, hectic etc... 
@@ -621,7 +622,7 @@ export default function AdoptAppCreate() {
               id=""
               cols="40"
               rows="4"
-              placeholder="Who is in the house? ..."
+              placeholder="First name and age each resident.  Who is in the house? ..."
               onChange={(e) =>
                 setFormData({ ...formData, yourFamily: e.target.value })
               }
